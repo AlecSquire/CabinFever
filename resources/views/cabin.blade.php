@@ -10,6 +10,7 @@
                 <strong>Movie ID:</strong> {{ $cabin_match['id'] }}
             </a>
         </li>
+        {{-- <img src="{{ Vite::image($cabin_match['image_path']) }}"> --}}
         <img src="{{ asset($cabin_match['image_path']) }}">
         {{-- <img src="{{ asset('/images/cabin1.webp') }}"> --}}
         <li><strong>Movie Title:</strong> {{ $cabin_match['title'] }}</li>
