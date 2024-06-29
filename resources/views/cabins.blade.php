@@ -2,10 +2,10 @@
     <x-slot name="heading">
        cabins
     </x-slot>
+    <h1>Hello this is a page to show all cabins</h1>
 
     @foreach($cabins as $cabin)
-    <a href="/film/{{ $cabin['id'] }}" class="hover:underline text-blue-500">
-       
+    {{-- <a href="/film/{{ $cabin['id'] }}" class="text-blue-500 hover:underline"> --}}
         <li><strong>cabin ID:</strong> {{ $cabin['id'] }}</li>
         <li><strong>cabin Title:</strong> {{ $cabin['title'] }}</li>
         <li><strong>cabin Rating:</strong> {{ $cabin['rating'] }}</li>
