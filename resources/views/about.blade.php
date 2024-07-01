@@ -1,34 +1,40 @@
 <!-- resources/views/about.blade.php -->
 <x-layout>
     <x-slot name="heading">
-        <div class="relative flex flex-col justify-between w-full h-screen">
+        <div class="relative flex flex-col justify-between rounded-xl w-full h-screen">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black">
-                <div class="flex flex-col justify-between w-full h-full bg-bottom bg-no-repeat bg-cover"
+                <div class="flex flex-col rounded-lg justify-between w-full h-1/2 bg-bottom bg-no-repeat bg-cover"
                     style="background-image: url('{{ asset('/images/cabin-lake.webp') }}');">
 
                     <!-- Your content here -->
 
-
-                    <div class="flex items-end justify-between w-full p-4 ">
-<x-bladewind::button class="w-1/4 bg-yellow-500 hover:bg-yellow-500">
-                        <div class="flex flex-col items-end space-y-2 text-right">
-                            <div class="text-3xl text-yellow-300 hover:text-yellow-100">34</div>
-                            <div class="text-white">Years Experience</div>
-                            <div class="text-3xl text-yellow-300 hover:text-yellow-100">25</div>
-                            <div class="text-white">Remote Locations</div>
-                            <div class="text-3xl text-yellow-300 hover:text-yellow-100">1300</div>
-                            <div class="text-white">Happy Adventurous</div>
-                            <div class="flex items-center space-x-2">
-                                <a class="color-slate-400" href="/about" :active="request()->is('about')">
-Enter The Wild
+                    <div class="flex items-center justify-between w-full p-4">
+                        <div class="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-300 transition-transform duration-300 ">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-end space-x-8">
+                                    <div class="flex flex-col items-start space-y-2">
+                                        <div class="text-3xl text-yellow-300">34</div>
+                                        <div class="text-white ">Years Experience</div>
+                                    </div>
+                                    <div class="flex flex-col items-start space-y-2">
+                                        <div class="text-3xl text-yellow-300">25</div>
+                                        <div class="text-white">Remote Locations</div>
+                                    </div>
+                                    <div class="flex flex-col items-start space-y-2">
+                                        <div class="text-3xl text-yellow-300">1300</div>
+                                        <div class="text-white">Happy Adventurers</div>
+                                    </div>
+                                </div>
+                                <a class="text-slate-200 text-xl sm:text-5xl rounded-lg transform hover:scale-105 p-4" href="/cabins" :active="request()->is('/cabins')">
+                                    Book now
                                 </a>
-                                </x-bladewind::button>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <div class="py-24 bg-white sm:py-32">
+                <div class="py-24 bg-white sm:py-32 ">
                     <div class="grid px-6 mx-auto max-w-7xl gap-x-8 gap-y-20 lg:px-8 xl:grid-cols-3">
                       <div class="max-w-2xl">
                         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet the team behind Wild Cabins.</h2>
@@ -53,8 +59,8 @@ Enter The Wild
                             with nature.
                         </p>
                     </div>
-                    <div class="max-w-2xl mx-auto mt-16 rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-                        <div class="p-8 sm:p-10 lg:flex-auto">
+                    <div class="max-w-2xl mx-auto mt-16 rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 bg-bottom lg:flex lg:max-w-none">
+                        <div class="p-8 sm:p-10 lg:flex-auto ">
                             <h3 class="text-2xl font-bold tracking-tight text-gray-100">Our Values</h3>
                             <p class="mt-6 text-base leading-7 text-gray-100">
                                 <span class="font-semibold">Authenticity:</span> We are committed to providing

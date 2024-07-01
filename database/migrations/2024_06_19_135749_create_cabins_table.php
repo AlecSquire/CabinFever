@@ -20,10 +20,11 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('rating');
             $table->integer('capacity');
-            $table->string('room_type');
+            $table->integer('number_of_rooms');
             $table->string('location');
-            
+
         });
+
     }
 
     /**

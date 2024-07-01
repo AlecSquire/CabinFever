@@ -3,21 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Cabins extends Model
 {
-    protected $table = 'cabins'; // Adjust table name as needed
+    use HasFactory;
+    protected $table = 'cabins'; // Table name in the database
+    // we use this instead of the following the laravel convetion of pluralizing the class name and using it as the table name
 
     protected $fillable = [
-        'title',
-'description','image_path','price','rating','capacity','room_type','location',
 
-
-
-
-
-
-
+'title','description','image_path','price','rating','capacity','number_of_rooms','location',
     ];
 
     // Accessor to retrieve the full image URL

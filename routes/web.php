@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Cabins;
+use App\Models\Review;
+use App\Models\Blog;
 
 // Home route
 Route::get('/', function () {
@@ -21,27 +23,24 @@ Route::get('/cabins', function ()  {
 
 // Single cabin route
 Route::get('/cabin/{id}', function ($id)  {
-
+   $reviews_all = Review::all();
     $cabin_match = Cabins::find($id);
-    return view('cabin', [    'cabin_match' => $cabin_match, 'movies' => Cabins::all('id') ]);
+    return view('cabin', ['cabin_match' => $cabin_match, 'reviews_all' => $reviews_all]);
 
+});
+Route::get('/reviews', function () {
+    $reviews_all = Review::all();
+    return view('reviews', ['reviews' => $reviews_all]);
 });
 
 // Contact route
 Route::get('/contact', function () {
-    $contact_info = [
-        'name' => 'Alec',
-        'email' => 'alecsquire@gmail.com',
-        'phone' => '555-555-5555',
-        'address' => '123 Main St, Devon, UK',
-    ];
-    return view('contact', ['contact_info' => $contact_info]);
+
+    return view('contact', []);
 });
 
-
-// // TV Shows route
-// Route::get('/shows', function ()  {
-
-//     return view('shows', ['shows' => null]);
-
+// // Blogs route
+// Route::get('/blogs', function () {
+//     $blogs = Blog::all();
+//     return view('blogs', ['blogs'=> $blogs]);
 // });
