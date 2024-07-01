@@ -9,12 +9,16 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $table = "blogs";
-    protected $fillable = [
-        'title',
-        'description',
-    ];
-    public static function all(self):string {
-        return 'Title: ' . $instance->title . ', ' . $instance->description;
-    }
+    public int $id;
+    public string $title;
+    public string $body;
+    public string $author;
+    public string $created_at;
+    public string $updated_at;
+
+public function getId():int {
+return $this->id;
+}
+
+
 }
