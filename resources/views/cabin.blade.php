@@ -14,7 +14,7 @@
                 <p> {{ $cabin_match->rating }} </p>
             </li>
 
-           <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:w-screen hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 overflow-x-hidden">
+           <div class="flex flex-col items-center overflow-x-hidden bg-white border border-gray-200 rounded-lg shadow md:flex-row md:w-screen hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="{{ asset('images/cabin' . $cabin_match->id . '.webp') }}" alt="">
            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="{{ asset('images/inside2.webp') }}" alt=""><img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="{{ asset('images/inside3.webp') }}" alt="">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="{{ asset('images/inside5.webp') }}" alt="">
@@ -42,10 +42,10 @@
 
 <div class="flex items-center mb-5">
     <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800">8.7</p>
-    <p class="ms-2 font-medium text-gray-900 dark:text-white">Excellent</p>
+    <p class="font-medium text-gray-900 ms-2 dark:text-white">Excellent</p>
     <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
     <p class="text-sm font-medium text-gray-500 dark:text-gray-400">376 reviews</p>
-    <a href="#" class="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read all reviews</a>
+    <a href="#" class="text-sm font-medium text-blue-600 ms-auto hover:underline dark:text-blue-500">Read all reviews</a>
 </div>
 <div class="gap-8 sm:grid sm:grid-cols-2">
     <div>

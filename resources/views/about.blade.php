@@ -1,17 +1,17 @@
 <!-- resources/views/about.blade.php -->
 <x-layout>
     <x-slot name="heading">
-        <div class="relative flex flex-col justify-between rounded-xl w-full h-screen">
+        <div class="relative flex flex-col justify-between w-full h-screen rounded-xl">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black">
-                <div class="flex flex-col rounded-lg justify-between w-full h-1/2 bg-bottom bg-no-repeat bg-cover"
+                <div class="flex flex-col justify-between w-full bg-bottom bg-no-repeat bg-cover rounded-lg h-1/2"
                     style="background-image: url('{{ asset('/images/cabin-lake.webp') }}');">
 
                     <!-- Your content here -->
 
                     <div class="flex items-center justify-between w-full p-4">
-                        <div class="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-300 transition-transform duration-300 ">
-                            <div class="flex justify-between items-center">
+                        <div class="w-full h-full transition-transform duration-300 bg-gray-400 border border-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 ">
+                            <div class="flex items-center justify-between">
                                 <div class="flex items-end space-x-8">
                                     <div class="flex flex-col items-start space-y-2">
                                         <div class="text-3xl text-yellow-300">34</div>
@@ -26,7 +26,7 @@
                                         <div class="text-white">Happy Adventurers</div>
                                     </div>
                                 </div>
-                                <a class="text-slate-200 text-xl sm:text-5xl rounded-lg transform hover:scale-105 p-4" href="/cabins" :active="request()->is('/cabins')">
+                                <a class="p-4 text-xl transform rounded-lg text-slate-200 sm:text-5xl hover:scale-105" href="/cabins" :active="request()->is('/cabins')">
                                     Book now
                                 </a>
                             </div>
@@ -42,14 +42,16 @@
                       </div>
                       <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
 
-<img src="{{ asset('images/team2.webp') }}" alt="Wild Cabins" class="w-full rounded-lg">
-<img src="{{ asset('images/cassiano-psomas-fzCa6ruUodQ-unsplash.webp') }}" alt="Wild Cabins" class="w-full rounded-lg">
+<img src="{{ Vite::image('team2.webp') }}" alt="Wild Cabins" class="w-full rounded-lg">
+<img src="{{ Vite::image('cassiano-psomas-fzCa6ruUodQ-unsplash.webp') }}" alt="Wild Cabins" class="w-full rounded-lg">
                         <!-- More people... -->
                       </ul>
                     </div>
                   </div>
 
 
+                  <div class="px-6 py-24 mx-auto max-w-7xl lg:px-8 sm:py-32">
+                    <div class="max-w-2xl mx-auto sm:text-center">
                   <div class="px-6 py-24 mx-auto max-w-7xl lg:px-8 sm:py-32">
                     <div class="max-w-2xl mx-auto sm:text-center">
                         <h2 class="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">About Wild Cabins</h2>
@@ -59,7 +61,7 @@
                             with nature.
                         </p>
                     </div>
-                    <div class="max-w-2xl mx-auto mt-16 rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 bg-bottom lg:flex lg:max-w-none">
+                    <div class="max-w-2xl mx-auto mt-16 bg-bottom rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
                         <div class="p-8 sm:p-10 lg:flex-auto ">
                             <h3 class="text-2xl font-bold tracking-tight text-gray-100">Our Values</h3>
                             <p class="mt-6 text-base leading-7 text-gray-100">
@@ -73,12 +75,16 @@
                                 warm, welcoming environments where guests feel at home.
                             </p>
                             <div class="flex items-center mt-10 gap-x-4">
+                            <div class="flex items-center mt-10 gap-x-4">
                                 <h4 class="flex-none text-sm font-semibold leading-6 text-indigo-600">Sustainability</h4>
+                                <div class="flex-auto h-px bg-gray-100"></div>
                                 <div class="flex-auto h-px bg-gray-100"></div>
                             </div>
                             <ul role="list"
                                 class="grid grid-cols-1 gap-4 mt-8 text-sm leading-6 text-gray-100 sm:grid-cols-2 sm:gap-6">
+                                class="grid grid-cols-1 gap-4 mt-8 text-sm leading-6 text-gray-100 sm:grid-cols-2 sm:gap-6">
                                 <li class="flex gap-x-3">
+                                    <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20"
                                     <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20"
                                         fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -89,6 +95,7 @@
                                 </li>
                                 <li class="flex gap-x-3">
                                     <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20"
+                                    <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20"
                                         fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd"
                                             d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
@@ -97,6 +104,7 @@
                                     Community Engagement
                                 </li>
                                 <li class="flex gap-x-3">
+                                    <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20"
                                     <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20"
                                         fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd"

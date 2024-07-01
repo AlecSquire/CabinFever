@@ -4,7 +4,7 @@
             <div class="flex flex-col mx-auto lg:flex-row max-w-7xl">
                 <!-- Image on the Left -->
                 <div class="flex-shrink-0 lg:w-1/2">
-                    <img src="{{ asset('images/inside1.webp') }}" alt="Landscape" class="w-full h-auto mb-12 rounded-lg shadow-xl">
+                    <img src="{{ asset('images/inside1.webp') }}" alt="Landscape" class="w-full h-auto rounded-lg shadow-xl">
                 </div>
 
                 <!-- Content on the Right -->
